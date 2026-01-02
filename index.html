@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tyrone Ochieng | Brand Architect</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        :root { --cyan: #00F2FF; }
+        body { background-color: #000; color: #fff; font-family: 'Inter', sans-serif; overflow-x: hidden; }
+        .header-font { font-family: 'Montserrat', sans-serif; }
+        
+        /* Image 02: Home Background */
+        .hero-section {
+            background: linear-gradient(to right, rgba(0,0,0,0.9) 30%, rgba(0,0,0,0.2) 100%), 
+                        url('hero-bg.jpg'); /* Your 2nd Image */
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+
+        /* Image 03: About Background */
+        .about-section {
+            background: linear-gradient(to right, rgba(0,0,0,0.95) 40%, rgba(0,0,0,0.4) 100%), 
+                        url('about-bg.jpg'); /* Your 3rd Image */
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+
+        .text-glow { text-shadow: 0 0 20px rgba(0, 242, 255, 0.5); }
+        .nav-glass { background: rgba(0,0,0,0.7); backdrop-filter: blur(15px); }
+        
+        /* Smooth Entrance Animation */
+        .reveal { opacity: 0; transform: translateY(30px); transition: all 1s ease-out; }
+        .reveal.active { opacity: 1; transform: translateY(0); }
+    </style>
+</head>
+<body>
+
+    <nav class="fixed w-full z-50 nav-glass border-b border-white/5 py-6 px-10 flex justify-between items-center">
+        <div class="header-font font-black tracking-tighter text-2xl uppercase">
+            Tyrone <span class="text-cyan-400">Ochieng</span>
+        </div>
+        <div class="hidden md:flex space-x-12 text-[10px] font-bold uppercase tracking-[0.5em] text-zinc-400">
+            <a href="#home" class="hover:text-cyan-400 transition">Home</a>
+            <a href="#about" class="hover:text-cyan-400 transition">About</a>
+            <a href="#contact" class="text-cyan-400 border border-cyan-400/30 px-6 py-2 rounded-full">Initiate Discovery</a>
+        </div>
+    </nav>
+
+    <section id="home" class="hero-section min-h-screen flex items-center px-10 md:px-24">
+        <div class="max-w-4xl pt-20">
+            <h2 class="text-cyan-400 text-[11px] font-bold uppercase tracking-[0.8em] mb-6">Multi-Disciplinary Brand Architect</h2>
+            <h1 class="header-font text-6xl md:text-9xl uppercase leading-[0.85] tracking-tighter mb-8">
+                Identity.<br>Infrastructure.<br><span class="text-white/20">Impact.</span>
+            </h1>
+            <p class="max-w-lg text-zinc-300 text-lg font-light leading-relaxed mb-10">
+                Engineering high-performance brand ecosystems. We merge surgical design precision with IT strategic management to build the digital backbone of the future.
+            </p>
+            <div class="flex space-x-6">
+                <a href="#contact" class="bg-cyan-400 text-black px-12 py-5 rounded-full text-xs font-black uppercase tracking-widest hover:bg-white transition-all shadow-xl">Start Project</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about-section min-h-screen flex items-center px-10 md:px-24 border-y border-white/5">
+        <div class="max-w-3xl reveal" id="about-content">
+            <h3 class="text-cyan-400 text-[10px] font-bold uppercase tracking-[1em] mb-10 italic underline underline-offset-8">The Philosophy</h3>
+            <h2 class="header-font text-5xl md:text-7xl uppercase tracking-tighter mb-8 leading-tight">
+                Architecting <br><span class="text-cyan-400">Total Dominance</span>
+            </h2>
+            <p class="text-zinc-300 text-xl font-light leading-relaxed mb-6">
+                Design is not just what it looks like; it's how the infrastructure survives. With a focus on the Logistics and Tech sectors, I provide the blueprints for brands that require sub-second speed and unbreakable reliability.
+            </p>
+            <p class="text-zinc-500 text-md font-light leading-relaxed italic">
+                Strategic Management // Brand Engineering // IT Integration
+            </p>
+        </div>
+    </section>
+
+    <section id="contact" class="py-32 px-10 md:px-24 bg-black">
+        <div class="max-w-4xl mx-auto border border-zinc-800 p-12 rounded-[3rem] bg-zinc-950/50">
+            <div class="text-center mb-16">
+                <h2 class="header-font text-4xl uppercase tracking-tighter">Project <span class="text-cyan-400">Discovery</span></h2>
+            </div>
+            <form action="https://formspree.io/f/ochiengt233@gmail.com" method="POST" class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <input type="text" name="name" placeholder="YOUR NAME" class="bg-transparent border-b border-zinc-800 py-4 text-xs tracking-widest uppercase focus:outline-none focus:border-cyan-400 transition">
+                <input type="email" name="email" placeholder="EMAIL ADDRESS" class="bg-transparent border-b border-zinc-800 py-4 text-xs tracking-widest uppercase focus:outline-none focus:border-cyan-400 transition">
+                <textarea name="message" rows="3" placeholder="PROJECT VISION" class="md:col-span-2 bg-transparent border-b border-zinc-800 py-4 text-xs tracking-widest uppercase focus:outline-none focus:border-cyan-400 transition"></textarea>
+                <button type="submit" class="md:col-span-2 bg-white text-black font-black py-6 rounded-full text-[10px] uppercase tracking-[0.5em] hover:bg-cyan-400 transition-all">Transmit Data</button>
+            </form>
+        </div>
+    </section>
+
+    <footer class="py-20 text-center border-t border-white/5">
+        <p class="text-[10px] text-zinc-600 uppercase tracking-[0.8em]">© 2026 Tyrone Ochieng | Brand Architect | +254 114 242 012</p>
+    </footer>
+
+    <script>
+        // Simple Scroll Reveal Logic
+        window.addEventListener('scroll', () => {
+            const reveal = document.getElementById('about-content');
+            const windowHeight = window.innerHeight;
+            const revealTop = reveal.getBoundingClientRect().top;
+            if (revealTop < windowHeight - 150) {
+                reveal.classList.add('active');
+            }
+        });
+    </script>
+</body>
+</html>
